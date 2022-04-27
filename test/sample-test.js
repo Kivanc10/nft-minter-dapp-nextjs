@@ -59,7 +59,7 @@ describe("Token contract", function () {
             
             console.log("tempTokenrui --> " + tempTokenUri)
             //let tempTokenUri = `${baseUri}${}`
-            const result = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.3") })
+            const result = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.01") })
             console.log("token id --> ", result)
             totalSupply = await minterNFT.totalSupply()
             console.log("total supply after minting --> ", totalSupply)
@@ -68,9 +68,6 @@ describe("Token contract", function () {
             console.log("first nft uri --> ", firstNftUri)
             console.log("tokenUri(0) --> " + await minterNFT.tokenURI(parseInt(totalSupply-1)))
             expect(await minterNFT.tokenURI(totalSupply-1)).to.equal("https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/0.json")
-        //    await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", "https://gateway.pinata.cloud/ipfs/QmNu2qwi8uQKwZ3Lx1TyFiFrfdzYswRSosjreTFJHvrtqG/1.json", { value: ethers.utils.parseEther("0.5") }) -- error (already minted)
-            // console.log("result[0] ---> ",result[0])
-            // console.log("result[1] ---> ",result[1])
             let contract_balance = await minterNFT.getBalance()
 
             console.log("balance ---> " + contract_balance +" type --> "+  typeof contract_balance)
@@ -80,7 +77,7 @@ describe("Token contract", function () {
             expect(Number((await minterNFT.ownerOf(totalSupply-1)))).to.equal(Number(0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266))
             totalSupply = await minterNFT.totalSupply()
             tempTokenUri = `${totalSupply}.json`
-           const res2 = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.3") })
+           const res2 = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.01") })
            console.log("result.value2 --> ",res2.value)
            const totalSupply2 = await minterNFT.totalSupply()
            expect(totalSupply2).to.equal(2)
@@ -92,11 +89,19 @@ describe("Token contract", function () {
             ethereum_bal = await provider.getBalance(my_addr)
            console.log("my account balance(nft) --> " + ownerBalance)
            console.log("lsat my account balance(eth) --> " + Web3.utils.fromWei(ethereum_bal.toString()))
-           expect(Web3.utils.fromWei(ethereum_bal.toString())).to.equal("0.6")
+           expect(Web3.utils.fromWei(ethereum_bal.toString())).to.equal("0.02")
+           // public sale
+           totalSupply = await minterNFT.totalSupply()
+           console.log("total supply ---> " + totalSupply)
+           tempTokenUri = `${totalSupply}.json`
+           const res3 = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.03") })
+           console.log("result.value2 --> ",res3.value)
+           const totalSupply3 = await minterNFT.totalSupply()
+           expect(totalSupply3).to.equal(3)
         })
     })
     
-/*
+
     describe("indexing", async () => {
         it("list nfts", async () => {
             //await minterNFT.toggleSaleState()
@@ -132,5 +137,5 @@ describe("Token contract", function () {
             expect(result.join(",")).to.equal(expected.join(","))
         })
      })
-    */
+    
 })

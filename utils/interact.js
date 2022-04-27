@@ -2,7 +2,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_API_URL);
 const creator_address = process.env.NEXT_CONTRACT_CREATOR_ADDRESS
 const contract = require("../artifacts/contracts/DogNftDemo.sol/DogNftDemo.json");
-const contractAddress = "0x1eF96070fBA82B91437c2B7beA4C124eD649dC49";
+const contractAddress = process.env.CONTRACT_ADDRESS;
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
 import axios from "axios"
