@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useStatus } from "../context/statusContext";
+import Head from "next/head";
+
 
 import {
   getMaxMintAmount,
@@ -75,7 +77,8 @@ const Hero = () => {
   };
 
   return (
-    <main id="main" className="h-screen py-16 bg-pattern">
+    
+    <main id="main" className="h-screen py-16 bg-pattern text-center sm:text-left">
       <div className="container max-w-6xl mx-auto flex flex-col items-center pt-4">
         <div className="flex flex-col items-center">
           <Image
@@ -176,6 +179,7 @@ const Hero = () => {
         </div>
       </div>
     </main>
+   
   );
 };
 

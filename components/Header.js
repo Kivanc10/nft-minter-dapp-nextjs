@@ -45,6 +45,7 @@ const Header = () => {
       <Head>
         <title>The My Art NFT</title>
         <meta name="description" content="Nft Minting" />
+        <meta name="viewport" content="viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
