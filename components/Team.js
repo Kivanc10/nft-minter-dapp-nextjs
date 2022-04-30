@@ -6,7 +6,7 @@ const Team = () => {
             
         <section className="bg-indigo-700 dark:bg-gray-900">
             <div className="container px-6 py-10 mx-auto">
-                <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-black">Our Executive Team</h1>
+                <h1 className="text-3xl font-semibold text-center text-yellow-400 capitalize lg:text-4xl dark:text-black">Our Executive Team</h1>
                 
                 <p className="max-w-2xl mx-auto my-6 text-center text-white dark:text-black">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
@@ -16,12 +16,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">arthur melo</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">arthur melo</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">design director</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">design director</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -30,7 +30,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -54,12 +54,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">Amelia. Anderson</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">Amelia. Anderson</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">Lead Developer</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">Lead Developer</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -68,7 +68,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -92,12 +92,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">Olivia Wathan</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">Olivia Wathan</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">Lead designer</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">Lead designer</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -106,7 +106,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +116,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -130,12 +130,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">John Doe</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">John Doe</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">Full stack developer</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">Full stack developer</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -144,7 +144,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +154,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -168,12 +168,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">Mia</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">Mia</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">Graphic Designer</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">Graphic Designer</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -182,7 +182,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +192,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -206,12 +206,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1608174386344-80898cec6beb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">Junior REIS</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">Junior REIS</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">Products Managers</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">Products Managers</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-black group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-red-500 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -220,7 +220,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -230,7 +230,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -244,12 +244,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">Joseph Gonzalez</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">Joseph Gonzalez</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">Software engineer</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">Software engineer</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -258,7 +258,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -268,7 +268,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-white dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -282,12 +282,12 @@ const Team = () => {
                     <div className="flex flex-col items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-yellow-100 rounded-xl">
                         <img className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1521488741203-dcc320950ce5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""/>
                         
-                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-black">Emma Doe</h1>
+                        <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-red-500">Emma Doe</h1>
                         
-                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-black">Content Writer</p>
+                        <p className="mt-2 text-white capitalize dark:text-gray-300 group-hover:text-red-500">Content Writer</p>
                         
                         <div className="flex mt-3 -mx-2">
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-black" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -296,7 +296,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-black"
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-red-500"
                                 aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -306,7 +306,7 @@ const Team = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-black" aria-label="Github">
+                            <a href="#" className="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-red-500" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path

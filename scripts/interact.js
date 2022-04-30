@@ -20,8 +20,8 @@ async function main() {
     // console.log("The mintPrice is: " + mintPrice);
     // let isSaleActive = await dogNftContract.saleIsActive() 
     // console.log("isSaleActive " + isSaleActive)
-    await dogNftContract.toggleSaleState()
-    console.log("okkk")
+    // await dogNftContract.toggleSaleState()
+    // console.log("okkk")
     // console.log("updating mint price.....")
     // const tx = await dogNftContract.changeMintPrice("50000000000000000",{gasLimit: 50000})
     // await tx.wait()

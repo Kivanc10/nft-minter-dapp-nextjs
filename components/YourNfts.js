@@ -59,7 +59,7 @@ export default function YourNfts() {
     }
     return (
         <div id="your_nfts">
-            <div className=" flex flex-col items-center justify-center sm:px-0 px-6 z-20 pb-32">
+            <div className="flex flex-col items-center justify-center sm:px-0 px-6 z-20 pb-32">
                 <div className="md:py-36 py-20">
                     <h1
                         role="heading"
@@ -92,7 +92,7 @@ export default function YourNfts() {
             </div>
 
             {toReturn.length > 0 && ok && (
-                <div id="your_gallery" className="py-20 mt-16 bg-secondary">
+                <div id="your_gallery" className="py-20 mt-16 bg-indigo-700">
                     <div className="container max-w-6xl mx-auto">
                         <h2 className="mb-10 text-5xl font-bold text-center text-white">
                             Your NFTs minted

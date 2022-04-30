@@ -140,7 +140,7 @@ const Header = () => {
 
               <li>
                 <a
-                  href="https://twitter.com/DidemKkkaraasl1"
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -159,7 +159,7 @@ const Header = () => {
 
               <li>
                 <a
-                  href="https://discord.gg/rAFdkCwn"
+                  href="https://discord.com/"
                   target="_blank"
                   rel="noreferrer"
                 >

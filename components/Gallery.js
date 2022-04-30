@@ -59,7 +59,7 @@ const Gallery = ({}) => {
   }, [embla, onSelect, onScroll]);
 
   return (
-    <div id="gallery" className="py-20 mt-16 bg-secondary">
+    <div id="gallery" className="py-20 mt-16 bg-indigo-700">
       <div className="container max-w-6xl mx-auto">
         <h2 className="mb-10 text-5xl font-bold text-center text-white">
           The Gallery
