@@ -43,8 +43,8 @@ const Header = () => {
   return (
     <>
       <Head>
-        <title>Dog NFT Demo</title>
-        <meta name="description" content="Nft Minting Tutorial" />
+        <title>The My Art NFT</title>
+        <meta name="description" content="Nft Minting" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -54,7 +54,7 @@ const Header = () => {
           <Link href="#">
             <a className="text-2xl font-bold">
               <span className="pr-2 text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-purple-600">
-                Dog NFT
+                My Art NFT
               </span>
               Demo
             </a>
@@ -77,17 +77,29 @@ const Header = () => {
               </li>
 
               <li className="text-gray-200 text-semibold">
-                <Link href="#faq">
-                  <a>FAQ</a>
-                </Link>
-              </li>
-
-              <li className="text-gray-200 text-semibold">
                 <Link href="#your_nfts">
                   <a>Your NFTs</a>
                 </Link>
               </li>
 
+              <li className="text-gray-200 text-semibold">
+                <Link href="#roadmap">
+                  <a>RoadMap</a>
+                </Link>
+              </li>
+
+              <li className="text-gray-200 text-semibold">
+                <Link href="#team">
+                  <a>Team</a>
+                </Link>
+              </li>
+
+
+              <li className="text-gray-200 text-semibold">
+                <Link href="#faq">
+                  <a>FAQ</a>
+                </Link>
+              </li>
               <li className="hover:text-purple-500 hover:border-purple-500 cursor-pointer px-4 py-2 font-extrabold text-purple-300 border border-purple-300 rounded-md">
                 <a
                   className=""

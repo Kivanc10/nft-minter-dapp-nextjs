@@ -16,12 +16,14 @@ const dogNftContract = new ethers.Contract(CONTRACT_ADDRESS,contract.abi,signer)
 const contractSigner = dogNftContract.connect(signer)
 
 async function main() {
-    let mintPrice = await dogNftContract.mintPrice();
-    console.log("The mintPrice is: " + mintPrice);
+    // let mintPrice = await dogNftContract.mintPrice();
+    // console.log("The mintPrice is: " + mintPrice);
     // let isSaleActive = await dogNftContract.saleIsActive() 
     // console.log("isSaleActive " + isSaleActive)
+    await dogNftContract.toggleSaleState()
+    console.log("okkk")
     // console.log("updating mint price.....")
-    // const tx = await dogNftContract.changeMintPrice("10000000000000000",{gasLimit: 50000})
+    // const tx = await dogNftContract.changeMintPrice("50000000000000000",{gasLimit: 50000})
     // await tx.wait()
     // mintPrice = await dogNftContract.mintPrice();
     // console.log("new mint price is " + mintPrice)

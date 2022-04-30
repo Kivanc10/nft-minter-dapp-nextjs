@@ -18,8 +18,8 @@ contract DogNftDemo is ERC721 {
     uint256 public constant presale_mintPrice = 10000000000000000; // 0.01 ETH.
     uint256 public mintPrice = 30000000000000000; // 0.03 ETH.
     uint256 public constant maxMint = 3;
-    uint256 public MAX_TOKENS = 10;
-    uint256 public MAX_PRESALE = 2;
+    uint256 public MAX_TOKENS = 300;
+    uint256 public MAX_PRESALE = 50;
 
       bool public saleIsActive = true;
       bool public presaleIsActive = true;
@@ -28,7 +28,7 @@ contract DogNftDemo is ERC721 {
 
     // Name token using inherited ERC721 constructor.
     constructor() public ERC721("DogNftDemo", "DOGNFT") {
-       _setBaseURI("https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/");
+       _setBaseURI("https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/");
     }
     
 

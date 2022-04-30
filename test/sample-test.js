@@ -50,24 +50,24 @@ describe("Token contract", function () {
             let ethereum_bal = await provider.getBalance(my_addr)
             expect(ethereum_bal).to.equal(0)
             console.log("first my account balance(eth) --> " + ethereum_bal)
-            let totalSupply = await minterNFT.totalSupply()
+            let totalSupply = parseInt(await minterNFT.totalSupply())
             //await minterNFT.toggleSaleState()
             let baseUri = await minterNFT.baseURI()
             console.log("base uri --> " + baseUri)
             
-            let tempTokenUri = `${totalSupply}.json`
+            let tempTokenUri = `${parseInt(totalSupply+1)}.json`
             
             console.log("tempTokenrui --> " + tempTokenUri)
             //let tempTokenUri = `${baseUri}${}`
             const result = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.01") })
             console.log("token id --> ", result)
-            totalSupply = await minterNFT.totalSupply()
+            totalSupply = parseInt(await minterNFT.totalSupply())
             console.log("total supply after minting --> ", totalSupply)
             expect(totalSupply).to.equal(1)
             const firstNftUri = await minterNFT.tokenURIsMinted(0)
             console.log("first nft uri --> ", firstNftUri)
             console.log("tokenUri(0) --> " + await minterNFT.tokenURI(parseInt(totalSupply-1)))
-            expect(await minterNFT.tokenURI(totalSupply-1)).to.equal("https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/0.json")
+            expect(await minterNFT.tokenURI(totalSupply-1)).to.equal("https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/1.json")
             let contract_balance = await minterNFT.getBalance()
 
             console.log("balance ---> " + contract_balance +" type --> "+  typeof contract_balance)
@@ -75,13 +75,13 @@ describe("Token contract", function () {
             console.log("result.value --> ",result.value)
             console.log("owner of the token --> ",await minterNFT.ownerOf(totalSupply-1))
             expect(Number((await minterNFT.ownerOf(totalSupply-1)))).to.equal(Number(0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266))
-            totalSupply = await minterNFT.totalSupply()
-            tempTokenUri = `${totalSupply}.json`
+            totalSupply = parseInt(await minterNFT.totalSupply())
+            tempTokenUri = `${parseInt(totalSupply+1)}.json`
            const res2 = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.01") })
            console.log("result.value2 --> ",res2.value)
-           const totalSupply2 = await minterNFT.totalSupply()
+           const totalSupply2 = parseInt(await minterNFT.totalSupply())
            expect(totalSupply2).to.equal(2)
-           expect(await minterNFT.tokenURIsMinted(1)).to.equal("https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/1.json")
+           expect(await minterNFT.tokenURIsMinted(1)).to.equal("https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/2.json")
            console.log("id 1 nft metadata --> " + await minterNFT.tokenURIsMinted(1))
            contract_balance = await minterNFT.getBalance()
            console.log("total contract balance -_> " + Web3.utils.fromWei(contract_balance.toString()))
@@ -91,12 +91,14 @@ describe("Token contract", function () {
            console.log("lsat my account balance(eth) --> " + Web3.utils.fromWei(ethereum_bal.toString()))
            expect(Web3.utils.fromWei(ethereum_bal.toString())).to.equal("0.02")
            // public sale
-           totalSupply = await minterNFT.totalSupply()
+           totalSupply = parseInt(await minterNFT.totalSupply())
            console.log("total supply ---> " + totalSupply)
-           tempTokenUri = `${totalSupply}.json`
+           tempTokenUri = `${parseInt(totalSupply+1)}.json`
+           console.log("tempTokenuri -_> "+tempTokenUri)
            const res3 = await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", tempTokenUri,{ value: ethers.utils.parseEther("0.03") })
            console.log("result.value2 --> ",res3.value)
-           const totalSupply3 = await minterNFT.totalSupply()
+           
+           const totalSupply3 = parseInt(await minterNFT.totalSupply())
            expect(totalSupply3).to.equal(3)
         })
     })
@@ -105,13 +107,14 @@ describe("Token contract", function () {
     describe("indexing", async () => {
         it("list nfts", async () => {
             //await minterNFT.toggleSaleState()
-            let totalSupply = await minterNFT.totalSupply()
+            let totalSupply = parseInt(await minterNFT.totalSupply())
+            console.log(typeof totalSupply)
             let baseUri = await minterNFT.baseURI()
             console.log("base uri --> " + baseUri)
-            let tempTokenUri1 = `${totalSupply}.json`
-            let tempTokenUri2 = `${parseInt(totalSupply+1)}.json`
-            let tempTokenUri3 = `${parseInt(totalSupply+2)}.json`
-            let tempTokenUri4 = `${parseInt(totalSupply+3)}.json`
+            let tempTokenUri1 = `${parseInt(totalSupply+1)}.json`
+            let tempTokenUri2 = `${parseInt(totalSupply+2)}.json`
+            let tempTokenUri3 = `${parseInt(totalSupply+3)}.json`
+            let tempTokenUri4 = `${parseInt(totalSupply+4)}.json`
 
             await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",tempTokenUri1,{ value: ethers.utils.parseEther("0.5") })
             await minterNFT.mint(1, "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",tempTokenUri2,{ value: ethers.utils.parseEther("0.5") })
@@ -121,7 +124,7 @@ describe("Token contract", function () {
              totalSupply = await minterNFT.totalSupply()
             // console.log("total supply --> ", parseInt(totalSupply))
             expect(totalSupply).to.equal(4)
-            let expected = ["https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/0.json", "https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/1.json", "https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/2.json", "https://gateway.pinata.cloud/ipfs/QmbUmggBrbBPPv18gKaBX7xeXM8Vh4qJt3dYvn8eWmjYTH/3.json"]
+            let expected = ["https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/1.json", "https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/2.json", "https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/3.json", "https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/4.json"]
             let result = []
             let temp;
             for (let i = 0; i < totalSupply; i++) {
@@ -130,9 +133,9 @@ describe("Token contract", function () {
                 result.push(temp)
             }
             // console.log("\n")
-            // console.log(result.join(","))
+            console.log("r --> " + result.join(","))
             // console.log("\n")
-            // console.log(expected.join(","))
+            console.log("e --> "+ expected.join(","))
             // console.log("\n")
             expect(result.join(",")).to.equal(expected.join(","))
         })

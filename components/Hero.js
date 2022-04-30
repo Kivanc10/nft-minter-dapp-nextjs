@@ -59,16 +59,6 @@ const Hero = () => {
     }
   };
 
-  const activateSale_ = async () => {
-   //setIsSaleActive(await activateSale())
-   let {ok_status,state,info} = await activateSale()
-   setOkSale(ok_status)
-   setStateInfo(info)
-   if(state !== undefined) {setIsSaleActive(state)}
-   else {setIsSaleActive(true)}
-   console.log("current state " + isSaleActive)
-   console.log(info)
-  }
 
   const decrementCount = () => {
     if (count > 1) {
@@ -89,7 +79,7 @@ const Hero = () => {
       <div className="container max-w-6xl mx-auto flex flex-col items-center pt-4">
         <div className="flex flex-col items-center">
           <Image
-            src="/images/ezgif.com-gif-maker.gif"
+            src="/images/test.gif"
             width="270"
             height="270"
             alt="emoji faces gif"
@@ -101,7 +91,7 @@ const Hero = () => {
               {/* Minted NFT Ratio */}
               <p className="bg-gray-100 rounded-md text-gray-800 font-extrabold text-lg my-4 py-1 px-3">
                 <span className="text-purple-600">{`${totalSupply}`}</span> /
-                10
+                300
               </p>
 
               <div className="flex items-center mt-6 text-3xl font-bold text-gray-200">
@@ -149,6 +139,12 @@ const Hero = () => {
               </div>
 
               <h4 className="mt-2 font-semibold text-center text-white">
+                {totalSupply < 50 && (
+                 <span className="text-sm text-gray-300"> (Presale) </span>
+                )}
+                {totalSupply >= 50 && (
+                   <span className="text-sm text-gray-300"> (Public sale) </span>
+                )}
                 {nftPrice} ETH{" "}
                 <span className="text-sm text-gray-300"> + GAS</span>
               </h4>
@@ -160,7 +156,6 @@ const Hero = () => {
               >
                 Mint now!
               </button>
-              <button onClick={activateSale_} className="mt-6 py-2 px-4 text-center text-white uppercase bg-pink-500 border-b-4 border-pink-700 rounded hover:bg-pink-400 hover:border-pink-500">deactivate</button>
             </>
           ) : (
             <div>
@@ -168,7 +163,6 @@ const Hero = () => {
               {" "}
               😥 Sale is not active yet!
             </p>
-            <button onClick={() => activateSale_()} className="mt-6 py-2 px-4 text-center text-white uppercase bg-pink-500 border-b-4 border-pink-700 rounded hover:bg-pink-400 hover:border-pink-500">Activate</button>
             </div>
           )}
 

@@ -12,7 +12,7 @@ const About = () => {
           <div className="max-w-md mx-auto">
             <div>
               <h1 className="font-mono text-3xl font-bold text-gray-900 underlined">
-                THE EMOJI FACES
+                THE MY ART NFT COLLECTION
               </h1>
             </div>
             <div className="divide-y divide-gray-200">
@@ -33,7 +33,7 @@ const About = () => {
                       </svg>
                     </span>
                     <p className="ml-2">
-                      <code className="font-semibold text-gray-900">7,777</code>{" "}
+                      <code className="font-semibold text-gray-900">300</code>{" "}
                       ERC-721 NFTs.
                     </p>
                   </li>
@@ -52,7 +52,7 @@ const About = () => {
                       </svg>
                     </span>
                     <p className="ml-2">
-                      Hand-drawn, high-res scanned. Irresistible.
+                    Produced by Hashlip Art Engine to preview.
                     </p>
                   </li>
                   <li className="flex items-start">
@@ -70,7 +70,7 @@ const About = () => {
                       </svg>
                     </span>
                     <p className="ml-2">
-                      Over 170 traits, several rarity levels.
+                      Many traits can be defined, including rarity levels.
                     </p>
                   </li>
                   <li className="flex items-start">
@@ -87,15 +87,13 @@ const About = () => {
                         />
                       </svg>
                     </span>
-                    <p className="ml-2">0.01 ETH per FACES.</p>
+                    <p className="ml-2">0.01 ETH per art for presale, 0.03 ETH for public sale.</p>
                   </li>
                 </ul>
               </div>
               <div className="pt-6 text-base leading-6 font-extralight sm:text-lg sm:leading-7">
                 <p>
-                  {`Emoji Faces seemed doomed to live as fancy props. Mere
-                  portable delights for their human masters. But a few rogue
-                  ones didn't want to play the nice-faces game anymore.`}
+                  {`My collection's fancy long description and its supreme purpose :)`}
                 </p>
                 <p className="mt-8">
                   <Link href="#main">

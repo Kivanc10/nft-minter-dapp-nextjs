@@ -7,6 +7,9 @@ import About from "../components/About";
 import Gallery from "../components/Gallery";
 import FAQ from "../components/FAQ";
 import YourNfts from "../components/YourNfts"
+import RoadMap from "../components/RoadMap";
+import Team from "../components/Team";
+
 
 export default function Home() {
   return (
@@ -14,9 +17,11 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <Gallery />
-      <FAQ />
+      <Gallery />      
       <YourNfts />
+      <RoadMap />
+      <Team />
+      <FAQ />
     </div>
   );
 }

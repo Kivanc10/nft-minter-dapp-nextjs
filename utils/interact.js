@@ -2,12 +2,12 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_API_URL);
 const creator_address = process.env.NEXT_CONTRACT_CREATOR_ADDRESS
 const contract = require("../artifacts/contracts/DogNftDemo.sol/DogNftDemo.json");
-const contractAddress = process.env.CONTRACT_ADDRESS;
+//const contractAddress = process.env.CONTRACT_ADDRESS;
+const contractAddress = "0x3C3101fBb611DADfD322f03414438103c8B5e85E"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
+//nftContract.options.address = "0x21deF65CAb087bF305DB94c634505dE165655701"
 
 import axios from "axios"
-
-
 
 export const connectWallet = async () => {
   if (window.ethereum) {
@@ -112,10 +112,18 @@ export const getTotalSupply = async () => {
 };
 
 export const getNftPrice = async () => {
-  const result = await nftContract.methods.mintPrice().call();
-  console.log("result --> ")
-  console.log(result)
-  const resultEther = web3.utils.fromWei(result, "ether");
+  let resultEther = 0;
+  const totalSupply = await nftContract.methods.totalSupply().call();
+  if (totalSupply < 50) {
+    const result = await nftContract.methods.presale_mintPrice().call();
+    resultEther = web3.utils.fromWei(result, "ether");
+  } else {
+    const result = await nftContract.methods.mintPrice().call();
+    console.log("result --> ")
+    console.log(result)
+    resultEther = web3.utils.fromWei(result, "ether");
+  }
+
   return resultEther;
 };
 
@@ -175,16 +183,17 @@ export const mintNFT = async (mintAmount) => {
       ),
     };
   }
-  let totalSupply = await nftContract.methods.totalSupply().call()
-  let tempTokenUri = `${totalSupply}.json`
+  let totalSupply = parseInt(await nftContract.methods.totalSupply().call())
+  let tempTokenUri = `${parseInt(totalSupply + 1)}.json`
+  let price = await getNftPrice()
   //set up your Ethereum transaction
   const transactionParameters = {
     to: contractAddress, // Required except during contract publications.
     from: window.ethereum.selectedAddress, // must match user's active address.
-    value: parseInt(web3.utils.toWei("0.03", "ether") * mintAmount).toString(
+    value: parseInt(web3.utils.toWei(price.toString(), "ether") * mintAmount).toString(
       16
     ), // hex
-    gasLimit: "0",
+    gasLimit: "50000",
     data: nftContract.methods.mint(mintAmount, window.ethereum.selectedAddress, tempTokenUri).encodeABI(), //make call to NFT smart contract
   };
   //sign the transaction via Metamask
@@ -240,7 +249,7 @@ export const getNftsMintedBySelectedAddress = async () => {
       if (last.length > 0) {
         return {
           last,
-          status: "You can show your nfts",
+          status: "You can look at your NFTs minted below, you have " + last.length + " NFT(s)",
           totalSupply,
           ok: true
         }
@@ -280,7 +289,7 @@ export const getNftsDataForMinter = async () => {
       toReturn: []
     }
   } else {
-    for (let i = 0; i < last.length; i++) {
+    for (let i = 1; i <= last.length; i++) {
       let tempId = parseInt(i)
       try {
         let res = await axios.get(`${BASE_URL_TO_MINT}${tempId}.json`)
@@ -303,10 +312,10 @@ export const getNftsDataForMinter = async () => {
 }
 
 export const getBalance = async () => {
-  if(window.ethereum.selectedAddress) {
+  if (window.ethereum.selectedAddress) {
     let balance = await nftContract.methods.balanceOf(window.ethereum.selectedAddress).call()
     return balance
   }
   return undefined
-  
+
 }

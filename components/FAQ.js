@@ -22,7 +22,7 @@ export default function MyApp() {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="font-bold font-comfortaa uppercase text-lg leading-none text-gray-800">
-                  What is an NFT?
+                  Question-1
                 </h2>
               </div>
               <button
@@ -73,13 +73,7 @@ export default function MyApp() {
               <ul className="">
                 <li>
                   <p className="text-base leading-normal text-gray-600 mt-4">
-                    {`NFT stands for "Non-fungible token," a unique, digital item
-                    with blockchain-managed ownership that users can buy, own,
-                    and trade. While some NFT's function as digital art, they
-                    can also offer additional benefits like exclusive access to
-                    websites, event tickets, game items, and ownership records
-                    for physical objects. Think of it as a unique piece of art
-                    that can also serve as a one-of-a-kind "members-only" card.`}
+                    {`Answer-1`}
                   </p>
                 </li>
               </ul>
@@ -89,7 +83,7 @@ export default function MyApp() {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="font-bold font-comfortaa uppercase text-lg leading-none text-gray-800">
-                  How do I buy an NFT?
+                Question 2
                 </h2>
               </div>
               <button
@@ -142,12 +136,7 @@ export default function MyApp() {
               <ul>
                 <li>
                   <p className="text-base leading-normal text-gray-600 mt-4 ">
-                    {` You need a wallet! Download the metamask.io extension for
-                    the Chrome/Brave browser or app on mobile. Once joined, you
-                    will be able to kiss your frog after minting the NFT. FYI,
-                    there will be a fee associated with every transaction
-                    related to gas prices. Once you have made your purchase, the
-                    Frogz in your wallet will be viewable on OpenSea.`}
+                    {` Answer 2`}
                   </p>
                 </li>
               </ul>
@@ -157,7 +146,7 @@ export default function MyApp() {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="font-bold font-comfortaa uppercase text-lg leading-none text-gray-800">
-                  How many FACES can I buy at once?
+                  Question 3
                 </h2>
               </div>
               <button
@@ -210,8 +199,7 @@ export default function MyApp() {
               <ul>
                 <li>
                   <p className="text-base leading-normal text-gray-600 mt-4 ">
-                    You can buy as many as you want with the limit of 5 per
-                    transaction.
+                    Answer 3
                   </p>
                 </li>
               </ul>
@@ -221,7 +209,7 @@ export default function MyApp() {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="font-bold font-comfortaa uppercase text-lg leading-none text-gray-800">
-                  Who is behind Emoji Faces?
+                  Question 4
                 </h2>
               </div>
               <button
@@ -272,7 +260,7 @@ export default function MyApp() {
               <ul>
                 <li>
                   <p className="text-base leading-normal text-gray-600 mt-4 ">
-                    codingwithdidem :) 🎉🎉🎉
+                    Answer 4
                   </p>
                 </li>
               </ul>

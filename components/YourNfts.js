@@ -69,20 +69,25 @@ export default function YourNfts() {
                     </h1>
                 </div>
                 {toReturn.length === 0 && (
-                    <div>
-                        {last.length === 0 && !ok_sel_addr && (
-                            <div className="flex items-center justify-center px-4 py-4 mt-8 font-semibold text-white bg-red-400 rounded-md ">
-                                {status_sel_addr}
-                            </div>
-                        )}
-                    </div>
+                   <div role="alert">
+                   <div className="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+                     NFT
+                   </div>
+                   <div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+                     <p>{status_sel_addr}</p>
+                   </div>
+                 </div>
 
                 )}
 
                 {toReturn.length !== 0 && ok_sel_addr && (
-                    <div className="flex items-center justify-center px-4 py-4 mt-8 font-semibold text-white bg-red-400 rounded-md ">
-                        {status_sel_addr}
-                    </div>
+                   <div className="bg-indigo-900 text-center py-4 lg:px-4">
+                   <div className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+                     <span className="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">NFT</span>
+                     <span className="font-semibold mr-2 text-left flex-auto">{status_sel_addr}</span>
+                     <svg className="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+                   </div>
+                 </div>
                 )}
             </div>
 
