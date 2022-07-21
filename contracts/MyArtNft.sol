@@ -6,7 +6,7 @@ pragma solidity <= 0.8;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract DogNftDemo is ERC721 {
+contract MyArtNft is ERC721 {
     address payable my_addr = 0xbE8D4707B4D9b7A87DE9bAc74A9Fa583ca04BfC1;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds; //--
@@ -15,7 +15,7 @@ contract DogNftDemo is ERC721 {
     string[] public tokenURIsMinted;
     mapping(string => bool) _tokenUriExists;
     // Contract global variables.
-    uint256 public constant presale_mintPrice = 10000000000000000; // 0.01 ETH.
+    uint256 public presale_mintPrice = 10000000000000000; // 0.01 ETH.
     uint256 public mintPrice = 30000000000000000; // 0.03 ETH.
     uint256 public constant maxMint = 3;
     uint256 public MAX_TOKENS = 300;
@@ -25,9 +25,10 @@ contract DogNftDemo is ERC721 {
       bool public presaleIsActive = true;
 
     event MintPriceChanged(uint256 value);
+    event PresaleMintPriceChanged(uint256 value);
 
     // Name token using inherited ERC721 constructor.
-    constructor() public ERC721("DogNftDemo", "DOGNFT") {
+    constructor() public ERC721("MyArtNFT", "MYARTNFT") {
        _setBaseURI("https://gateway.pinata.cloud/ipfs/QmXDiTuwDwrwjr5FVTfaMrzUqX9V5dVFXiNmi4sCCFXnUS/");
     }
     
@@ -110,6 +111,7 @@ contract DogNftDemo is ERC721 {
     }
 
     function toggleSaleState() external {
+        require(msg.sender == my_addr,"You're not admin");
         saleIsActive = !saleIsActive;
       }
     
@@ -125,6 +127,11 @@ contract DogNftDemo is ERC721 {
         require(msg.sender == my_addr,"You're not admin");
         mintPrice = value;
         emit MintPriceChanged(value);
+    }
+    function changePresaleMintPrice(uint256 value) external {
+        require(msg.sender == my_addr,"You're not admin");
+        presale_mintPrice = value;
+        emit PresaleMintPriceChanged(value);
     }
 
 }

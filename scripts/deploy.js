@@ -7,9 +7,9 @@ const { ethers } = require("hardhat");
 
 async function main() {
   // We get the contract to deploy
-  const DogNftDemo = await ethers.getContractFactory("DogNftDemo");
-  const dogNftDemo = await DogNftDemo.deploy();
-  console.log("Contract deployed to address:", dogNftDemo.address);
+  const MyArtNFT = await ethers.getContractFactory("MyArtNft");
+  const myArtNft = await MyArtNFT.deploy();
+  console.log("Contract deployed to address:", myArtNft.address);
 
 }
 

@@ -38,8 +38,8 @@ module.exports = {
 
 // 0x249F5fF0D0A4604912e2C27107cb5c22d8eD8dE1
 
-// require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-waffle");
 
-// module.exports = {
-//   solidity: "0.7.3"
-// };
+module.exports = {
+  solidity: "0.7.3"
+};

@@ -111,7 +111,7 @@ const RoadMap = () => {
             </div>
         </div>
         {/* <!--right column--> */}
-        <div classNameName="w-2/5 px-2 py-10 ">
+        <div className="w-2/5 px-2 py-10 ">
     
         </div>
     </div>

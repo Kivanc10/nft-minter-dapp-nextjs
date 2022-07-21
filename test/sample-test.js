@@ -9,7 +9,7 @@ describe("Token contract", function () {
     let minterNFT;
 
     this.beforeEach(async function () {
-        Minter = await ethers.getContractFactory("DogNftDemo")
+        Minter = await ethers.getContractFactory("MyArtNft")
         minterNFT = await Minter.deploy();
     })
     describe("deployment", function () {
@@ -19,11 +19,11 @@ describe("Token contract", function () {
 
         })
         it("has a name", async () => {
-            expect(await minterNFT.name()).to.equal("DogNftDemo")
+            expect(await minterNFT.name()).to.equal("MyArtNFT")
         })
         it("has a symbol", async () => {
             const symbol = await minterNFT.symbol()
-            expect(symbol).to.equal("DOGNFT")
+            expect(symbol).to.equal("MYARTNFT")
         })
         it("ownerof func test",async () => {
             try {

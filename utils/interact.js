@@ -1,7 +1,7 @@
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_API_URL);
 const creator_address = process.env.NEXT_CONTRACT_CREATOR_ADDRESS
-const contract = require("../artifacts/contracts/DogNftDemo.sol/DogNftDemo.json");
+const contract = require("../artifacts/contracts/MyArtNft.sol/MyArtNft.json");
 //const contractAddress = process.env.CONTRACT_ADDRESS;
 const contractAddress = "0x3C3101fBb611DADfD322f03414438103c8B5e85E"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
@@ -172,6 +172,8 @@ export const getMintedNftsUrl = async () => {
 }
 
 export const mintNFT = async (mintAmount) => {
+  //const BASE_URL_TO_MINT = await nftContract.methods.baseURI().call()
+
   if (!window.ethereum.selectedAddress) {
     return {
       success: false,
@@ -184,6 +186,7 @@ export const mintNFT = async (mintAmount) => {
     };
   }
   let totalSupply = parseInt(await nftContract.methods.totalSupply().call())
+  
   let tempTokenUri = `${parseInt(totalSupply + 1)}.json`
   let price = await getNftPrice()
   //set up your Ethereum transaction
